@@ -51,9 +51,9 @@ export async function ThreeItemGrid() {
 
   return (
     <section className="lg:grid lg:grid-cols-6 lg:grid-rows-2" data-testid="homepage-products">
-      <ThreeItemGridItem size="full" item={firstProduct} background="purple" />
-      <ThreeItemGridItem size="half" item={secondProduct} background="black" />
-      <ThreeItemGridItem size="half" item={thirdProduct} background="pink" />
+      <ThreeItemGridItem size="full" item={firstProduct} background="white" />
+      <ThreeItemGridItem size="half" item={secondProduct} background="white" />
+      <ThreeItemGridItem size="half" item={thirdProduct} background="white" />
     </section>
   );
 }
