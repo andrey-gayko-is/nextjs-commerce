@@ -9,13 +9,13 @@ export async function Carousel() {
   if (!products?.length) return null;
 
   return (
-    <div className="relative w-full overflow-hidden bg-black dark:bg-white">
+    <div className="relative w-full overflow-hidden bg-white dark:bg-white">
       <div className="flex animate-carousel">
         {[...products, ...products].map((product, i) => (
           <Link
             key={`${product.handle}${i}`}
             href={`/product/${product.handle}`}
-            className="relative h-[30vh] w-1/2 flex-none md:w-1/3"
+            className="relative h-[30vh] w-1/2 flex-none border-r md:w-1/3"
           >
             {product.featuredImage ? (
               <Image
