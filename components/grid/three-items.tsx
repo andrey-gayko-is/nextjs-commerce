@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { GridTileImage } from 'components/grid/tile';
 import { getCollectionProducts } from 'lib/bigcommerce';
 import type { VercelProduct as Product } from 'lib/bigcommerce/types';
@@ -14,7 +15,10 @@ function ThreeItemGridItem({
 }) {
   return (
     <div
-      className={size === 'full' ? 'lg:col-span-4 lg:row-span-2' : 'lg:col-span-2 lg:row-span-1'}
+      className={clsx(
+        'border',
+        size === 'full' ? 'lg:col-span-4 lg:row-span-2' : 'lg:col-span-2 lg:row-span-1'
+      )}
     >
       <Link className="block h-full" href={`/product/${item.handle}`}>
         <GridTileImage
